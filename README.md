@@ -1,7 +1,6 @@
-# Homework 2 Readme
-Name:
+# Homework - C Practice - Readme
 
-Github Account name: 
+Name:
 
 Link to Assignment on Github: (copy and paste the link to your assignment repo here)
 
