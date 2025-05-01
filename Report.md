@@ -102,6 +102,10 @@ For both these questions, are you are free to use what you did as the last secti
 ## Deeper Thinking
 In Java and Python, do you think new objects are stored on the stack or the heap? Feel free to work through your thoughts as to why it would be better to store them on the stack or heap. You should consider pass by reference, and how that is similar to pointer in your answer. Feel free to use resources, but make sure to cite them, and include the citation below using ACM format. You will note LLMs are not valid references, but they can give you directions to valid references. Make sure to use your own words. 
 
+Answer here using a paragraph (not just bullet points). 
+
+
+
 
 ## References
 Add any references you use here. Use ACM style formatting, adding to the numbers as you add the reference. 
