@@ -114,7 +114,7 @@ Add any references you use here. Use ACM style formatting, adding to the numbers
 
 2. ...
 
-## Linking to images?
+## Resource/Help: Linking to images?
 To link an image, you use the following code
 
 ```markdown
