@@ -110,9 +110,9 @@ Answer here using a paragraph (not just bullet points).
 ## References
 Add any references you use here. Use ACM style formatting, adding to the numbers as you add the reference. 
 
-[1] cppreference.com Contributors. 2025. Standard library header <stdlib.h>. cppreference.com. Retrieved May 1, 2025 from https://en.cppreference.com/w/c/header/stdlib
+1. cppreference.com Contributors. 2025. Standard library header <stdlib.h>. cppreference.com. Retrieved May 1, 2025 from https://en.cppreference.com/w/c/header/stdlib
 
-[2] ...
+2. ...
 
 ## Linking to images?
 To link an image, you use the following code
