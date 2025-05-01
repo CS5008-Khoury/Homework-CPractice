@@ -162,7 +162,7 @@ Point* create_point(int x, int y){
  * Creates a polygon with the given size. Allocates it on the heap. (malloc)
  * and returns the new polygon
  * 
- * For the points, you are creating the array of points, but you do not have too allocate
+ * For the points, you are creating the array of points, but you do not have to allocate
  * the point values. it is just a polygon of eventual size, and an array of empty points. 
 */
 Polygon* create_polygon(int size){
