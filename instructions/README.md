@@ -8,7 +8,7 @@ Often in the software engineering industry, you will be asked to pickup a new la
   - [Write your Code and Tests](#write-your-code-and-tests)
     - [Compiling Your Code](#compiling-your-code)
       - [:star: Compile Frequently :star:](#star-compile-frequently-star)
-  - [Questions](#questions)
+    - [Report.md](#reportmd)
   - [📝 Grading Rubric](#-grading-rubric)
     - [Submission Reminder 🚨](#submission-reminder-)
   - [📚 Resources](#-resources)
@@ -84,15 +84,18 @@ Every assignment will have to fill out both a README.md and Report.md, so make s
    * Create Polygon, rectangle, and triangle works
    * Copy array works in wrap cases (0 <= end < start < size)
    * Calculate area works for different shapes
-3. Meets  (AG)
-
+3. Meets  (MG)
+   * Report.md questions answered correctly up until the
+     technical interview questions.
+   * At least 2 references included using ACM format.
 4. Exceeds  (MG)
-   * At least 3 commits
+   * At least 3 commits       
    * All values stored on the heap are properly freed
    * Complete test coverage in tests.c. Including multiple tests for every function except for the ones we provided (the ones that included print), and edge cases checked. You do not have to test free_polygon (but you should look it up in the debugger).
    * Code documented properly (including explaining tests)
-   * README.md questions answered correctly
-     * Including technical interview question and coding practice file provided/submitted.
+   * Deeper Thinking question answered
+   * Technical Interview question answered (at least one)
+   * Leet/Coding Practice Problem(s) submitted (at least one)
 
 
 
