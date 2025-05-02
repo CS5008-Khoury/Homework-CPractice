@@ -27,16 +27,16 @@ The learning objects for this assignment are
 For this assignment (and all others) you will be provided some files to work with. It is always best to look through the provided files to see what is going on while also updating the comments at the top of the file. 
 
 The files provided for this assignment are:
-* [cpractice.h](../cpractice.h) - This files contains all the functions you need to implement along with the structs you need to use. You will notice the function signatures are provided, along with the struct definitions. You will need to implement the functions in [cpractice.h](../cpractice.h) following the comments provided. The various print functions are intentionally implemented for you, so you can use them. This is called a header library, and is still valid C code. 
-* [main.c](../main.c) - This file contains a sample run of the program testing the various features. You can run this file to see the output of the program, but it is recommended you wait until the end to run it. 
-* [tests.c](../tests.c) - This file will be where you will store your tests. **FOR EVERY FUNCTION** you implement except for free'ing memory, you will immediately want to implement a few tests to ensure it is working properly. These tests should try to break the function / look at edge cases, in addition to just making sure works. In true test driven development, you should actually write the tests first, before writing a function. Take a look at this code, how are we running the functions (notice we are adding them to the array).
+* [cpractice.h](../src/cpractice.h) - This files contains all the functions you need to implement along with the structs you need to use. You will notice the function signatures are provided, along with the struct definitions. You will need to implement the functions in [cpractice.h](../src/cpractice.h) following the comments provided. The various print functions are intentionally implemented for you, so you can use them. This is called a header library, and is still valid C code. 
+* [main.c](../src/main.c) - This file contains a sample run of the program testing the various features. You can run this file to see the output of the program, but it is recommended you wait until the end to run it. 
+* [tests.c](../src/tests.c) - This file will be where you will store your tests. **FOR EVERY FUNCTION** you implement except for free'ing memory, you will immediately want to implement a few tests to ensure it is working properly. These tests should try to break the function / look at edge cases, in addition to just making sure works. In true test driven development, you should actually write the tests first, before writing a function. Take a look at this code, how are we running the functions (notice we are adding them to the array).
    > A key concept here - write tests after *every* function. Don't wait until the end. You will thank yourself if you incrementally write tests as you go.
 
 
 ## Write your Code and Tests
 👉🏽 **Task** 👈🏽: Write your functions!
 
-Now following the comments in [cpractice.h](../cpractice.h), implement the functions. You will also need to write tests for each function in [tests.c](../tests.c). 
+Now following the comments in [cpractice.h](../src/cpractice.h), implement the functions. You will also need to write tests for each function in [tests.c](../src/tests.c). 
 
 :star: **Important** :star:  
 You should incrementally write your code, testing as you go along! 
