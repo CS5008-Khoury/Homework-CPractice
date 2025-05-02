@@ -1,8 +1,8 @@
-# Homework 02 Instructions
+# Homework C Practice Instructions
 
 Often in the software engineering industry, you will be asked to pickup a new language on the fly. This is because a language is a tool, and you are often needing to select the best tool for the job. In this course, we use C as it helps us better understand the underlying system that we are working with. Learning a new language can be challenging, but the best way to is to find relationships to what you know while also taking time to practice the syntax differences. This homework is designed to help you learn a new language, and get you comfortable with the process of learning a new language. You will be asked to learn the basics of C, and then implement a few functions in C. You will also be asked to write a few tests in C. 
 
-- [Homework 02 Instructions](#homework-02-instructions)
+- [Homework C Practice Instructions](#homework-c-practice-instructions)
   - [Learning Objectives](#learning-objectives)
   - [Provided Files](#provided-files)
   - [Write your Code and Tests](#write-your-code-and-tests)
