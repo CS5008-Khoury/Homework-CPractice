@@ -73,9 +73,9 @@ Completely answer the report questions below. Make sure to double check the fina
 
 7. What are some common built in libraries used for C, list at least 3 and explain each one in your own words. Name at least 3 functions in those libraries (hint: we used two of the most common ones in this assignment. There are many resources online that tell you functions in each library)
    
-   > [!IMPORTANT]
-   > 
-   > You need to include at least 1 reference in your answer to this question. Though ideally you would have a reference for every library
+> [!IMPORTANT]
+> 
+> You need to include at least 1 reference in your answer to this question. Though ideally you would have a reference for every library
    
    > Example library with a reference:
    > 
