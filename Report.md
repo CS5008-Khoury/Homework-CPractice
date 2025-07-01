@@ -77,31 +77,30 @@ Completely answer the report questions below. Make sure to double check the fina
 > 
 > You need to include at least 1 reference in your answer to this question. Though ideally you would have a reference for every library
    
-   > Example library with a reference:
+   > **Example library with a reference:**
    > 
-   > **stdlib.h** - provides functions for general-purpose operations including memory management and random numbers [1].
-   > 
-   > - **void * malloc(size_t)** - allocates memory specified in size on the heap and returns a pointer to that location
-   > - **void * calloc(size_t num_elements, size_t element_size)** - contiguous allocation for allocating arrays with the default value of 0. Slower than malloc.
-   > - **int rand(void)** - returns a random integer between 0 and RAND_MAX. Seed should be set before hand.
+   > stdlib.h - provides functions for general-purpose operations including memory management and random numbers [1].    
+   > - void * malloc(size_t) - allocates memory specified in size on the heap and returns a pointer to that location
+   > - void * calloc(size_t num_elements, size_t element_size) - contiguous allocation for allocating arrays with the default value of 0. Slower than malloc.
+   > - int rand(void) - returns a random integer between 0 and RAND_MAX. Seed should be set before hand.
    
    1. library 1 - explanation 
       
-      * function 1 - explanation
-      * function 2 - explanation
-      * function 3 - explanation
+      * function 1 
+      * function 2 
+      * function 3 
    
    2. library 2 - explanation
       
-      * function 1 - explanation
-      * function 2 - explanation
-      * function 3 - explanation
+      * function 1 
+      * function 2 
+      * function 3 
    
    3. library 3 - explanation
       
-      * function 1 - explanation
-      * function 2 - explanation
-      * function 3 - explanation
+      * function 1 
+      * function 2 
+      * function 3 
 
 8. Looking at the struct Point and Polygon, we have a mix of values on the heap, and we make ample use of pointers. Take a moment to draw out how you think that looks after `create_triangle(2,3)` is called (see an example below). The important part of the drawing it to see that not everything is stored together in memory, but in different locations! Store the image file in your github repo and link it here. You can use any program to draw it such as [drawIO](https://app.diagrams.net/), or even draw it by hand and take a picture of it. 
 
