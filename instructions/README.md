@@ -93,7 +93,6 @@ Every assignment will have to fill out both a README.md and Report.md, so make s
    * All values stored on the heap are properly freed
    * Complete test coverage in tests.c. Including multiple tests for every function except for the ones we provided (the ones that included print), and edge cases checked. You do not have to test free_polygon (but you should look it up in the debugger).
    * Code documented properly (including explaining tests)
-   * Deeper Thinking question answered
    * Technical Interview question answered (at least one)
    * Leet/Coding Practice Problem(s) submitted (at least one)
 
