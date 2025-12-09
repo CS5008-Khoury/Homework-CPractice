@@ -69,6 +69,239 @@ Every assignment will have to fill out both a README.md and Report.md, so make s
 > as it will properly render latex math (which is required for a lot of reports). 
 
 
+## 🤖 Use of LLMs
+For this assignment, you should **not use LLMs for the main source code, or for your report**. For your report, it is VERY important to reason through the answers! Make sure you understand, and resubmissions will help you clarify understanding. 
+
+For the main source code, you are learning C, and as such, it is important to really think through the memory model. However, you are also to the point of starting to co-create with AI, so you are welcome to use AI to help you build your test functions. 
+
+**Reminder**: Every function that doesn't contain print statements (all the ones you wrote in your main implementation) should have a series of test cases written in `tests.c`.
+
+### Why Use LLMs for Testing?
+Writing comprehensive test cases is a skill that AI can help accelerate. By learning to write clear specifications and descriptions of what you expect, you're developing skills in:
+- **Precise communication** - describing exact behavior and edge cases
+- **Test-driven thinking** - thinking about pre/postconditions before implementation
+- **Validation** - checking that generated tests match your understanding
+
+### Method 1: Code Completion (e.g., GitHub Copilot)
+
+If you have code completion enabled, creating a very clear comment is essential. The quality of your comment directly impacts the quality of the generated test.
+
+**Example of a good test case comment:**
+```c 
+/**
+ * Test case for reverse_array(arr, size).
+ * Passing in the array [1, 2, 3, 4, 5, 6]
+ * modifies the `arr` array by reversing the values
+ * causing arr to be [6, 5, 4, 3, 2, 1]. 
+ * Size matches the range to reverse. Simple case. 
+ * precondition: arr = [1, 2, 3, 4, 5, 6], size = 6
+ * postcondition: arr = [6, 5, 4, 3, 2, 1], size = 6
+ * return 1 if test passed, 0 if test failed. 
+ **/
+void test_reverse_array_simple() {
+    // Let copilot generate the implementation
+}
+```
+
+**Key elements of a good test comment:**
+1. **Function being tested** - What function is this testing?
+2. **Input description** - What specific input are you providing?
+3. **Expected behavior** - What should happen?
+4. **Preconditions** - State of the system/data before the test
+5. **Postconditions** - Expected state after the test runs
+6. **Test category** - Is this a simple case, edge case, error case?
+
+**Important workflow:**
+- Write the comment FIRST (this proves you understand what should happen)
+- Let the AI generate the test implementation
+- **Add the test to your test suite in main() immediately**
+- **Run it before moving on** - Never generate multiple tests without running them
+- If it fails, debug whether your understanding was wrong or the generated code is incorrect
+
+### Method 2: Prompt-Based Systems (e.g., Claude, ChatGPT)
+
+#### Generating Individual Test Cases
+
+Use this prompt structure to generate a specific test case:
+
+````
+Generate a simple test case for the following function:
+
+```c 
+/**
+ * Reverses an array *in place* (meaning you don't copy into another array)
+ * 
+ * For example, if the array is [1, 2, 3, 4, 5] then the array should be
+ * [5, 4, 3, 2, 1]
+ * 
+ */
+void reverse_array(int *arr, int size)
+```
+
+Requirements for the test case:
+1. Include clear comments explaining what is being tested
+2. Show the precondition (initial array state)
+3. Show the postcondition (expected array state after reversal)
+4. Follow C syntax and best practices
+6. Return 1 if the test passes or 0 if it fails. 
+7. Make sure to print the item being tested as the start of the test.  
+
+After generating the test case, explain:
+- Why this is a correct test case
+- What aspect of the function it validates
+- Any potential issues or edge cases it doesn't cover
+````
+
+**Why the "explain after" is important:**
+- It forces you to understand WHY the test is correct
+- It helps you identify gaps in test coverage
+- It builds your mental model of testing strategies
+
+#### Discovering Edge Cases
+
+Use this prompt to explore what you should test:
+
+````
+Given the following function definition, what are common test cases and edge cases you recommend I check?
+
+```c 
+/**
+ * Reverses an array *in place* (meaning you don't copy into another array)
+ * 
+ * For example, if the array is [1, 2, 3, 4, 5] then the array should be
+ * [5, 4, 3, 2, 1]
+ * 
+ */
+void reverse_array(int *arr, int size)
+```
+
+For each test case you suggest:
+1. Explain what aspect it tests (normal operation, boundary condition, error case, etc.)
+2. Describe the expected behavior
+3. Note any assumptions about how the function should handle edge cases
+
+Organize your suggestions by category:
+- Simple/Normal cases
+- Boundary cases (empty arrays, single element, etc.)
+- Edge cases (very large arrays, etc.)
+- Potential error conditions
+
+Do NOT write the actual test code yet - just describe what should be tested and why.
+````
+
+**Why ask for descriptions first:**
+- You think through what SHOULD happen before seeing code
+- You can discuss edge case behavior with instructors/TAs if unclear
+- You learn to identify testing categories systematically
+
+#### Generating Complete Test Suites
+
+Once you understand what needs testing, use this prompt:
+
+````
+Based on our discussion of test cases for reverse_array(), generate a complete test suite in C.
+
+Function to test:
+```c 
+void reverse_array(int *arr, int size)
+```
+
+Generate test functions for these categories:
+1. Simple case - even-length array
+2. Simple case - odd-length array  
+3. Boundary case - empty array (size = 0)
+4. Boundary case - single element
+5. Boundary case - two elements
+6. Tests should return 1 if they pass correctly or 0 if they fail.
+7. Each test needs to print what is being tested at the start of the test. 
+
+For each test function:
+- Use descriptive function names (e.g., test_reverse_array_even_length)
+- Include comments with preconditions and postconditions
+- Make it easy to add to a main() test runner
+
+I already have a main() test runner that I will be adding the tests into. 
+````
+
+### Best Practices for AI-Assisted Testing
+
+1. **Always specify before generating**: Write comments describing what SHOULD happen before asking AI to generate the code
+2. **Run tests incrementally**: Add and run one test at a time
+3. **Verify your understanding**: If a test fails, make sure you understand why before fixing it
+4. **Don't blindly trust generated code**: AI can make mistakes - review every test
+5. **Use AI to explore edge cases**: Ask "what am I missing?" to find cases you didn't think of
+6. **Document your thinking**: Add comments explaining WHY each test case matters
+
+### What to Include in Your Submission
+
+When submitting `tests.c`, include:
+- **Test function names** that clearly describe what they test
+- **Comments** explaining the precondition and postcondition for each test
+- **A note** in comments if a test was AI-generated, and whether you modified it
+- **A main() function** that runs all tests and reports results clearly
+
+### Red Flags - When AI Usage Goes Wrong
+
+❌ **Don't do this:**
+- Generating 20 test cases without running any
+- Copying test code you don't understand
+- Using AI to write your main implementation functions
+- Letting AI write your report or analysis
+
+✅ **Do this:**
+- Use AI to accelerate test case creation
+- Verify every generated test yourself
+- Learn from AI suggestions about edge cases
+- Use AI as a teaching tool, not a replacement for thinking
+
+### Additional Prompts for Better Results
+
+**If the LLM needs more context about your testing framework:**
+```
+I'm writing tests in C without a formal testing framework. 
+
+My tests should:
+- Be individual void functions with descriptive names
+- Use printf() to show test progress
+- Either use assert() or manual if-checks to verify correctness
+- return 1 if passed or 0 if ailed
+
+Generate tests following this pattern.
+```
+
+**If you want to understand testing strategy better:**
+```
+I'm learning about software testing in C. Explain the difference between:
+- Normal/happy path test cases
+- Boundary conditions
+- Edge cases
+- Error conditions
+
+For each category, give me 2-3 examples relevant to array manipulation functions in C.
+
+Then quiz me: give me a function signature and ask me to identify what categories of tests I should write.
+```
+
+**If the generated test doesn't compile or work:**
+```
+The following test case you generated doesn't compile:
+
+[paste the code]
+
+The error I'm getting is: [paste error message]
+
+Please:
+1. Explain what's wrong
+2. Explain the correct C syntax/approach
+3. Provide the corrected version
+4. Explain why the correction works
+```
+
+
+> [!IMPORTANT]  
+> Remember: The goal is to learn C and develop good testing habits. AI is a tool to help you explore test cases and write tests faster, but you must understand every line of code in your submission.
+
+
 ## 📝 Grading Rubric
 
 1. Learning (AG)
